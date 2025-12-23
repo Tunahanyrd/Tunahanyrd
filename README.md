@@ -2,14 +2,12 @@
 
 Collection of ML/AI projects I worked on while learning. Each project taught me something different.
 
-## 📁 Structure
+## Structure
 
-```
 DeepLearning-Portfolio/
 ├── graph-neural-networks/
 │   ├── pancreatic-cancer-kg/        # Relational GAT (data leakage lol)
 │   ├── fake-news-detection/         # GAT experiments
-│   ├── clickbait-detection/         # Similar GAT approach
 │   ├── tv-show-recommendation/      # Graph-based recommender
 │   └── steam-game-recommendation/   # Steam game recs
 │
@@ -21,28 +19,27 @@ DeepLearning-Portfolio/
 ├── competitions/
 │   ├── house-prices/                # Kaggle house prices
 │   ├── playground-series/           # Kaggle playground
-│   ├── datathon/                    # Datathon project
-│   └── recent-competition/          # Recent work
+│   └── recent-competition/
 │
 └── data-analysis/
     ├── microsoft-malware-prediction.ipynb  # ⭐ SHOWCASE - 6 hours of pure analysis
     └── europa-salary-analysis/             # First visualization practice
-```
 
-## 🌟 Showcase Work
+## Showcase Work
 
 ### Microsoft Malware Prediction
+
 **My career-defining project.** Spent 6 hours with pen and paper analyzing this dataset from [Kaggle competition](https://www.kaggle.com/c/microsoft-malware-prediction). This analysis changed my career direction back to data. Pure tabular data work - no fancy models, just deep understanding.
 
-## 🚀 Projects
+## Projects
 
 ### Graph Neural Networks
 
 **Pancreatic Cancer KG** - Relational GAT for biomedical knowledge graph. Got 100% accuracy (definitely data leakage, need to fix). But learned a lot about graphs. These projects show I tried different things - graphs give best generalization but worst hardware performance. Very advanced topic. Most code here is AI-assisted.
 
-**Fake News & Clickbait Detection** - GAT + triplet loss experiments. Compared with classics like Naive Bayes.
+**Fake News Clickbait Detection** - GAT + triplet loss experiments. Compared with classics like Naive Bayes.
 
-**TV Show & Steam Recommendations** - Graph-based rec systems. Mixed SBERT with manual features. Made cool network visualizations.
+**TV Show** - Graph-based rec systems. Mixed SBERT with manual features. Made cool network visualizations.
 
 ### Computer Vision
 
@@ -60,19 +57,21 @@ DeepLearning-Portfolio/
 
 **Recent Competition** - CatBoost with heavy feature engineering.
 
+To be honest, I forgot which competitions they were, so that's why the folder names are like that. I just picked them pretty randomly. (I wonder which one is my “recent competition”)
+
 ### Data Analysis
 
-**Microsoft Malware Prediction** - See showcase section above. This is my best work.
+**Microsoft Malware Prediction** - See showcase section above. This is my best work (not technically, but in terms of the impact it leaves).
 
 **Europe Salary Analysis** - **First time doing visualization seriously.** Learned different plotting libraries and techniques.
 
 ## 🛠️ Tech Stack
 
 - **Deep Learning**: PyTorch, PyTorch Geometric
-- **ML**: Scikit-learn, CatBoost
+- **ML**: Scikit-learn, CatBoost, XGBoost and LightGBM
 - **NLP**: SBERT, Transformers
 - **Data**: Pandas, NumPy
-- **Viz**: Matplotlib, Seaborn, NetworkX, PyVis
+- **Viz**: Matplotlib, Seaborn
 
 ## 💭 What I Learned
 
@@ -84,8 +83,10 @@ DeepLearning-Portfolio/
 
 ## 📝 Notes
 
-Most projects are learning experiments - expect messy code in competitions (that's the point), possible data leakage bugs, and lots of AI-assisted code in graph projects.
+All the projects here are learning journeys. My goal is not to showcase my work, but to share my learning journey. This means you can find everything here, including code errors, AI comments, etc.
+
+For more: [github.com/Tunahanyrd](https://github.com/Tunahanyrd)
 
 ---
 
-For more: [github.com/Tunahanyrd](https://github.com/Tunahanyrd)
+> Thought does not require language. Language is an expression of thought. Intelligence requires thought more than it requires language. ~Yann LeCun
