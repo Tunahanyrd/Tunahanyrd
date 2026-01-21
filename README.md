@@ -3,7 +3,7 @@
 Collection of ML/AI projects I worked on while learning. Each project taught me something different.
 
 ## Structure
-
+```ascii
 DeepLearning-Portfolio/
 ├── graph-neural-networks/
 │   ├── pancreatic-cancer-kg/        # Relational GAT (data leakage lol)
@@ -24,7 +24,7 @@ DeepLearning-Portfolio/
 └── data-analysis/
     ├── microsoft-malware-prediction.ipynb  # ⭐ SHOWCASE - 6 hours of pure analysis
     └── europa-salary-analysis/             # First visualization practice
-
+```
 ## Showcase Work
 
 ### Microsoft Malware Prediction
