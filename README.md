@@ -43,7 +43,7 @@ highlights:
 * schema constraints, triggers, audit logs, materialized views, and exclusion constraints
 * focus on consistency, transaction boundaries, and database-first design
 
-[repo](github.com/tunahanyrd/obs-go)
+[repo](https://github.com/tunahanyrd/obs-go)
 
 ### koru
 
@@ -51,7 +51,7 @@ a current software project i am actively building.
 
 this is part of my newer direction: practical backend engineering, system design, and building real applications instead of only running experiments in notebooks.
 
-[repo](github.com/tunahanyrd/koru)
+[repo](https://github.com/tunahanyrd/koru)
 
 ### neuropass
 
