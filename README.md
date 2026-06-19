@@ -1,92 +1,164 @@
-# Deep Learning & Machine Learning Projects
+# software engineering & data systems portfolio
 
-Collection of ML/AI projects I worked on while learning. Each project taught me something different.
+a collection of projects, notes, and experiments from my shift toward backend engineering, postgresql, and data-intensive systems.
 
-## Structure
-```ascii
-DeepLearning-Portfolio/
-├── graph-neural-networks/
-│   ├── pancreatic-cancer-kg/        # Relational GAT (data leakage lol)
-│   ├── fake-news-detection/         # GAT experiments
-│   ├── tv-show-recommendation/      # Graph-based recommender
-│   └── steam-game-recommendation/   # Steam game recs
-│
-├── computer-vision/
-│   ├── brain-tumor-classification/  # First time trying GradCAM
-│   ├── covid-analysis/              # Just for fun experiment
-│   └── car-recognition/             # First few-shot learning attempt
-│
-├── competitions/
-│   ├── house-prices/                # Kaggle house prices
-│   ├── playground-series/           # Kaggle playground
-│   └── recent-competition/
-│
-└── data-analysis/
-    ├── microsoft-malware-prediction.ipynb  # ⭐ SHOWCASE - 6 hours of pure analysis
-    └── europa-salary-analysis/             # First visualization practice
-```
-## Showcase Work
+this repository used to be mostly a machine learning / deep learning archive. that was useful while i was exploring ai, graphs, computer vision, and kaggle-style workflows, but my current focus has changed.
 
-### Microsoft Malware Prediction
+these days, i am mostly interested in:
 
-**My career-defining project.** Spent 6 hours with pen and paper analyzing this dataset from [Kaggle competition](https://www.kaggle.com/c/microsoft-malware-prediction). This analysis changed my career direction back to data. Pure tabular data work - no fancy models, just deep understanding.
+* backend systems
+* postgresql and relational modeling
+* transaction safety
+* database-backed application design
+* data-intensive systems
+* storage engines and database internals
+* technical writing around engineering trade-offs
 
-## Projects
+## current direction
 
-### Graph Neural Networks
+i am a computer science student focused on backend and data-intensive systems. my recent work is less about training fancy models and more about building systems that keep data consistent, model real workflows properly, and survive edge cases.
 
-**Pancreatic Cancer KG** - Relational GAT for biomedical knowledge graph. Got 100% accuracy (definitely data leakage, need to fix). But learned a lot about graphs. These projects show I tried different things - graphs give best generalization but worst hardware performance. Very advanced topic. Most code here is AI-assisted.
+the main things i care about right now:
 
-**Fake News Clickbait Detection** - GAT + triplet loss experiments. Compared with classics like Naive Bayes.
+* designing schemas that actually encode business rules
+* using postgresql constraints, indexes, triggers, and transactions properly
+* understanding how oltp systems behave under real usage
+* writing backend services with clear boundaries
+* learning database internals instead of treating databases like dumb storage
 
-**TV Show** - Graph-based rec systems. Mixed SBERT with manual features. Made cool network visualizations.
+## active / recent projects
 
-### Computer Vision
+### obs-go
 
-**Brain Tumor Classification (BRICS 2025)** - **First time trying GradCAM.** That's why I included this. MRI classifier with ConvNeXt, 97% accuracy. Medical imaging is interesting.
+student information system mvp built with go and postgresql.
 
-**Car Recognition** - **First time solving few-shot learning.** That's the reason I kept this one. Transfer learning experiments.
+this project is one of my main backend/database projects. the goal was not just to build crud endpoints, but to model academic workflows properly and push consistency rules into the database where they belong.
 
-**COVID Analysis** - **Just for fun.** Experimented with CNN architectures to see what works.
+highlights:
 
-### Competitions
+* layered go backend with rest handlers, service logic, and repository layer
+* postgresql-backed data model for student information system workflows
+* transaction-safe course enrollment
+* use of `pg_advisory_xact_lock` to prevent race conditions during concurrent registration
+* schema constraints, triggers, audit logs, materialized views, and exclusion constraints
+* focus on consistency, transaction boundaries, and database-first design
 
-**Note**: Competition folders are messy on purpose - it's a testing ground where the only goal is best score. That's the nature of competitions.
+repo: github.com/tunahanyrd/go-obs
 
-**House Prices, Playground Series, Datathon** - These show **how obsessive you can get in competitions** (reading 2 papers for 0.01 F1 improvement lol). But competitions are fun and you learn a lot about squeezing every drop of performance.
+### koru
 
-**Recent Competition** - CatBoost with heavy feature engineering.
+a current software project i am actively building.
 
-To be honest, I forgot which competitions they were, so that's why the folder names are like that. I just picked them pretty randomly. (I wonder which one is my “recent competition”)
+this is part of my newer direction: practical backend engineering, system design, and building real applications instead of only running experiments in notebooks.
 
-### Data Analysis
+repo: github.com/tunahanyrd/koru
 
-**Microsoft Malware Prediction** - See showcase section above. This is my best work (not technically, but in terms of the impact it leaves).
+### neuropass
 
-**Europe Salary Analysis** - **First time doing visualization seriously.** Learned different plotting libraries and techniques.
+1st place project at neurobridge hackathon.
 
-## 🛠️ Tech Stack
+an ml-based drug screening pipeline built from smiles inputs. the project included dataset cleaning, feature preparation, model training, and prediction apis for bbb permeability, logbb exposure, and tox21 toxicity risk.
 
-- **Deep Learning**: PyTorch, PyTorch Geometric
-- **ML**: Scikit-learn, CatBoost, XGBoost and LightGBM
-- **NLP**: SBERT, Transformers
-- **Data**: Pandas, NumPy
-- **Viz**: Matplotlib, Seaborn
+even though i am not mainly focused on ai anymore, this project still matters because it combined applied ml with backend/api work and interpretable outputs.
 
-## 💭 What I Learned
+highlights:
 
-- **Graphs**: Best generalization, worst hardware performance. Very advanced.
-- **Competitions**: Teach you to be obsessive about details. Fun but brutal.
-- **Few-shot learning**: Solved it first time in car recognition project.
-- **GradCAM**: First experimented with it in brain tumor project.
-- **Tabular data**: Microsoft Malware showed me this is where I want to focus.
+* python, fastapi, scikit-learn, docker
+* trained and compared 18 classical ml models
+* used extratrees-based models for internal evaluation
+* combined probabilistic model outputs with deterministic medicinal-chemistry rules
+* produced interpretable screening results and risk explanations
 
-## 📝 Notes
+## technical writing
 
-All the projects here are learning journeys. My goal is not to showcase my work, but to share my learning journey. This means you can find everything here, including code errors, AI comments, etc.
+i also write about computer science and engineering trade-offs at:
 
-For more: [github.com/Tunahanyrd](https://github.com/Tunahanyrd)
+funeralcs.com
 
----
+topics i have written or explored include:
 
-> Thought does not require language. Language is an expression of thought. Intelligence requires thought more than it requires language. ~Yann LeCun
+* lsm-tree vs. b-tree storage engines
+* llm hallucinations
+* oltp workloads
+* indexing trade-offs
+* write-ahead logging
+* bloom filters
+* compaction
+* database internals
+
+writing helps me turn “i kind of understand this” into “i can explain the trade-off clearly.”
+
+## older learning archive
+
+this repository also contains older machine learning and deep learning projects.
+
+i am keeping them because they show my learning path, not because they represent my current direction.
+
+### graph neural networks
+
+older experiments with graph-based learning, including relational gat, fake news detection, recommendation systems, and graph visualizations.
+
+these projects taught me that graph methods can generalize well, but they also come with serious hardware and implementation costs.
+
+### computer vision
+
+older experiments with medical imaging, gradcam, transfer learning, and few-shot learning.
+
+examples:
+
+* brain tumor classification
+* car recognition
+* covid image analysis
+
+### competitions
+
+kaggle and datathon-style experiments.
+
+these folders are messy by nature. competitions are usually about iteration, feature engineering, model comparison, and squeezing small performance gains out of chaotic workflows.
+
+### data analysis
+
+older tabular and visualization work.
+
+the microsoft malware prediction analysis was especially important for me because it pushed me back toward data, tabular problems, and deeper system-level thinking.
+
+## tech stack
+
+current focus:
+
+* languages: go, python, sql
+* databases: postgresql, duckdb
+* backend: fastapi, rest apis, sqlalchemy, alembic, docker
+* data: pandas, numpy, data modeling, query optimization
+* tools: linux, git
+
+previous / learning projects:
+
+* pytorch
+* pytorch geometric
+* scikit-learn
+* catboost
+* xgboost
+* lightgbm
+* sbert
+* transformers
+* matplotlib
+* seaborn
+
+## what changed
+
+i used to describe this as a deep learning and machine learning portfolio.
+
+that is no longer accurate.
+
+ai/ml was an important learning phase for me, but my current direction is backend engineering and data systems. i am more interested in how data is modeled, stored, queried, indexed, protected by transactions, and exposed through clean services.
+
+in short:
+
+i care less about chasing model accuracy now, and more about building reliable systems around data.
+
+## links
+
+github: github.com/tunahanyrd
+website: funeralcs.com
+linkedin: linkedin.com/in/tunahanyrd
