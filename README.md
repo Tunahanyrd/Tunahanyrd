@@ -51,18 +51,6 @@ It targets Turkish complaint and customer-support style text, detecting spans su
 
 Built an ML-based drug screening pipeline from SMILES inputs with dataset cleaning, feature preparation, model training, FastAPI prediction endpoints, and interpretable output for BBB permeability, logBB exposure, and Tox21 toxicity risk.
 
-### [BATI](https://github.com/Tunahanyrd/BATI)
-
-Archived Linux battery analytics project. Kept public as an older systems/tooling project, but it is not my current focus.
-
-### [printer_wizard](https://github.com/Tunahanyrd/printer_wizard)
-
-Archived Python utility project. Kept public as an older practical tooling project.
-
-### [DeepLearning](https://github.com/Tunahanyrd/DeepLearning)
-
-Archived learning repository from my earlier ML/deep learning phase. It no longer represents my current direction, but I keep it visible as part of the path that led me toward data systems and backend engineering.
-
 ## Experience
 
 - Software Engineer, part-time at Istanbul University
