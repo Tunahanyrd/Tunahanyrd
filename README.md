@@ -1,52 +1,84 @@
-# Tunahan Yurdakul
+# Tunahan Yardimci
 
-Computer science student focused on backend engineering, PostgreSQL, and data-intensive systems.
+Computer Science student focused on backend engineering and data-intensive systems. I work mostly with PostgreSQL, Go, Python/FastAPI, and database-backed application design.
 
-I build software where correctness matters: database-backed applications, transaction-safe workflows, local-first tools, and small systems utilities. My current direction is less about model demos and more about reliable services, clear data models, and practical engineering trade-offs.
+Current direction: OLTP systems, schema design, transaction safety, storage-engine concepts, and practical software that keeps data consistent under real workflows.
 
-## Current Focus
+## What I Work On
 
-- Backend systems in Go and Python
-- PostgreSQL schema design, constraints, indexing, and transactions
-- Data-intensive application design
-- Local-first and Linux desktop tooling
-- Technical writing around databases, storage, and system trade-offs
+- Backend services with clear service boundaries
+- PostgreSQL schemas, constraints, indexes, triggers, and transactions
+- Data-intensive applications and local-first tools
+- Linux desktop utilities and small systems projects
+- Technical writing about databases, storage, LLM behavior, and engineering trade-offs
 
 ## Selected Projects
 
 ### [koru](https://github.com/Tunahanyrd/koru)
 
-Local-first document board for searchable personal archives. Built around practical document organization, search, and local ownership.
+Desktop-first, local-first document board for personal records such as invoices, contracts, certificates, scans, and notes.
 
-### [BATI](https://github.com/Tunahanyrd/BATI)
+Koru combines a native Gio desktop app, CLI tooling, SQLite FTS5 search, OCR extraction, content-addressed blob storage, soft delete, backup/restore, and local recovery checks. The design goal is simple: keep original bytes recoverable and searchable without accounts or cloud dependency.
 
-Battery Analytics & Timeline Interface for Linux. A Go application for observing battery state over time and turning raw system data into usable history.
+### [IU-KIK-APP](https://github.com/Tunahanyrd/IU-KIK-APP)
 
-### [tpm-keyring-unlock](https://github.com/Tunahanyrd/tpm-keyring-unlock)
+Institutional work tracking and coordination system for Istanbul University. Built for structured announcements, task assignment, scheduling, approvals, auditability, and push notifications instead of losing operational work in WhatsApp groups.
 
-Unlock GNOME Keyring using a TPM2-sealed secret for passwordless login. Focused on Linux security, boot-time trust, and practical desktop integration.
+Backend: FastAPI, PostgreSQL 16, SQLAlchemy, Alembic, APScheduler, JWT auth, append-only audit ledger, notification outbox, Prometheus metrics.
 
-### [goiface](https://github.com/Tunahanyrd/goiface)
+Frontend: React Native, Expo, role-based navigation, push notifications, dashboard exports, and mobile workflows for staff, managers, and student assistants.
 
-Static analysis tool for Go interfaces and concrete implementations. Built to make interface relationships easier to inspect in real codebases.
+### [obs-go](https://github.com/Tunahanyrd/obs-go)
+
+Student Information System MVP built with Go and PostgreSQL. This project is mainly about modeling core academic workflows correctly, even in a small monolith.
+
+Highlights:
+
+- Layered Go backend with REST handlers, services, repositories, and domain logic
+- PostgreSQL schemas for students, terms, courses, enrollments, schedules, audit logs, and statistics
+- Transaction-safe enrollment flow using constraints and `pg_advisory_xact_lock`
+- Database-level consistency through triggers, materialized views, and GiST exclusion constraints
+
+### [belgin-privacy-filter](https://github.com/Tunahanyrd/belgin-privacy-filter)
+
+Turkish-focused LoRA adapter for privacy-sensitive span detection on top of `openai/privacy-filter`.
+
+It targets Turkish complaint and customer-support style text, detecting spans such as private person names, emails, phone numbers, account numbers, and secrets so downstream systems can mask sensitive data before analytics, indexing, logging, or dataset preparation.
 
 ### [neuropass](https://github.com/Tunahanyrd/neuropass)
 
-1st place Neurobridge Hackathon project. ML-based drug screening pipeline with FastAPI, scikit-learn, Docker, and interpretable prediction outputs.
+1st place NeuroBridge Hackathon project for BBB permeability and ADMET screening.
 
-### [idm-linux-wrapper](https://github.com/Tunahanyrd/idm-linux-wrapper)
+Built an ML-based drug screening pipeline from SMILES inputs with dataset cleaning, feature preparation, model training, FastAPI prediction endpoints, and interpretable output for BBB permeability, logBB exposure, and Tox21 toxicity risk.
 
-Linux wrapper work around Internet Download Manager, focused on making an otherwise Windows-centric tool usable in a Linux workflow.
+### [BATI](https://github.com/Tunahanyrd/BATI)
+
+Archived Linux battery analytics project. Kept public as an older systems/tooling project, but it is not my current focus.
+
+### [printer_wizard](https://github.com/Tunahanyrd/printer_wizard)
+
+Archived Python utility project. Kept public as an older practical tooling project.
+
+### [DeepLearning](https://github.com/Tunahanyrd/DeepLearning)
+
+Archived learning repository from my earlier ML/deep learning phase. It no longer represents my current direction, but I keep it visible as part of the path that led me toward data systems and backend engineering.
+
+## Experience
+
+- Software Engineer, part-time at Istanbul University
+- Backend and PostgreSQL schema design for a department-wide academic mobile application
+- President, Data Club Community at Istanbul University
+- Co-founder and technical writer at [funeralcs.com](https://funeralcs.com)
 
 ## Tech Stack
 
 - Languages: Go, Python, SQL, Shell
-- Databases: PostgreSQL, DuckDB
-- Backend: REST APIs, FastAPI, SQLAlchemy, Alembic, Docker
-- Systems: Linux, Git, desktop integration, small CLIs
+- Databases: PostgreSQL, SQLite, DuckDB
+- Backend: FastAPI, REST APIs, SQLAlchemy, Alembic, Docker
 - Data: pandas, NumPy, data modeling, query optimization
+- Tools: Linux, Git, desktop integration, small CLIs
 
 ## Links
 
 - Website: [funeralcs.com](https://funeralcs.com)
-- LinkedIn: [linkedin.com/in/tunahan yrd](https://linkedin.com/in/tunahanyrd)
+- LinkedIn: [linkedin.com/in/tunahanyrd](https://linkedin.com/in/tunahanyrd)
