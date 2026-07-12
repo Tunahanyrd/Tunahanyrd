@@ -1,164 +1,52 @@
-# software engineering & data systems portfolio
+# Tunahan Yurdakul
 
-a collection of projects, notes, and experiments from my shift toward backend engineering, postgresql, and data-intensive systems.
+Computer science student focused on backend engineering, PostgreSQL, and data-intensive systems.
 
-this repository used to be mostly a machine learning / deep learning archive. that was useful while i was exploring ai, graphs, computer vision, and kaggle-style workflows, but my current focus has changed.
+I build software where correctness matters: database-backed applications, transaction-safe workflows, local-first tools, and small systems utilities. My current direction is less about model demos and more about reliable services, clear data models, and practical engineering trade-offs.
 
-these days, i am mostly interested in:
+## Current Focus
 
-* backend systems
-* postgresql and relational modeling
-* transaction safety
-* database-backed application design
-* data-intensive systems
-* storage engines and database internals
-* technical writing around engineering trade-offs
+- Backend systems in Go and Python
+- PostgreSQL schema design, constraints, indexing, and transactions
+- Data-intensive application design
+- Local-first and Linux desktop tooling
+- Technical writing around databases, storage, and system trade-offs
 
-## current direction
+## Selected Projects
 
-i am a computer science student focused on backend and data-intensive systems. my recent work is less about training fancy models and more about building systems that keep data consistent, model real workflows properly, and survive edge cases.
+### [koru](https://github.com/Tunahanyrd/koru)
 
-the main things i care about right now:
+Local-first document board for searchable personal archives. Built around practical document organization, search, and local ownership.
 
-* designing schemas that actually encode business rules
-* using postgresql constraints, indexes, triggers, and transactions properly
-* understanding how oltp systems behave under real usage
-* writing backend services with clear boundaries
-* learning database internals instead of treating databases like dumb storage
+### [BATI](https://github.com/Tunahanyrd/BATI)
 
-## active / recent projects
+Battery Analytics & Timeline Interface for Linux. A Go application for observing battery state over time and turning raw system data into usable history.
 
-### obs-go
+### [tpm-keyring-unlock](https://github.com/Tunahanyrd/tpm-keyring-unlock)
 
-student information system mvp built with go and postgresql.
+Unlock GNOME Keyring using a TPM2-sealed secret for passwordless login. Focused on Linux security, boot-time trust, and practical desktop integration.
 
-this project is one of my main backend/database projects. the goal was not just to build crud endpoints, but to model academic workflows properly and push consistency rules into the database where they belong.
+### [goiface](https://github.com/Tunahanyrd/goiface)
 
-highlights:
+Static analysis tool for Go interfaces and concrete implementations. Built to make interface relationships easier to inspect in real codebases.
 
-* layered go backend with rest handlers, service logic, and repository layer
-* postgresql-backed data model for student information system workflows
-* transaction-safe course enrollment
-* use of `pg_advisory_xact_lock` to prevent race conditions during concurrent registration
-* schema constraints, triggers, audit logs, materialized views, and exclusion constraints
-* focus on consistency, transaction boundaries, and database-first design
+### [neuropass](https://github.com/Tunahanyrd/neuropass)
 
-[repo](https://github.com/tunahanyrd/obs-go)
+1st place Neurobridge Hackathon project. ML-based drug screening pipeline with FastAPI, scikit-learn, Docker, and interpretable prediction outputs.
 
-### koru
+### [idm-linux-wrapper](https://github.com/Tunahanyrd/idm-linux-wrapper)
 
-a current software project i am actively building.
+Linux wrapper work around Internet Download Manager, focused on making an otherwise Windows-centric tool usable in a Linux workflow.
 
-this is part of my newer direction: practical backend engineering, system design, and building real applications instead of only running experiments in notebooks.
+## Tech Stack
 
-[repo](https://github.com/tunahanyrd/koru)
+- Languages: Go, Python, SQL, Shell
+- Databases: PostgreSQL, DuckDB
+- Backend: REST APIs, FastAPI, SQLAlchemy, Alembic, Docker
+- Systems: Linux, Git, desktop integration, small CLIs
+- Data: pandas, NumPy, data modeling, query optimization
 
-### neuropass
+## Links
 
-1st place project at neurobridge hackathon.
-
-an ml-based drug screening pipeline built from smiles inputs. the project included dataset cleaning, feature preparation, model training, and prediction apis for bbb permeability, logbb exposure, and tox21 toxicity risk.
-
-even though i am not mainly focused on ai anymore, this project still matters because it combined applied ml with backend/api work and interpretable outputs.
-
-highlights:
-
-* python, fastapi, scikit-learn, docker
-* trained and compared 18 classical ml models
-* used extratrees-based models for internal evaluation
-* combined probabilistic model outputs with deterministic medicinal-chemistry rules
-* produced interpretable screening results and risk explanations
-
-## technical writing
-
-i also write about computer science and engineering trade-offs at:
-
-funeralcs.com
-
-topics i have written or explored include:
-
-* lsm-tree vs. b-tree storage engines
-* llm hallucinations
-* oltp workloads
-* indexing trade-offs
-* write-ahead logging
-* bloom filters
-* compaction
-* database internals
-
-writing helps me turn “i kind of understand this” into “i can explain the trade-off clearly.”
-
-## older learning archive
-
-this repository also contains older machine learning and deep learning projects.
-
-i am keeping them because they show my learning path, not because they represent my current direction.
-
-### graph neural networks
-
-older experiments with graph-based learning, including relational gat, fake news detection, recommendation systems, and graph visualizations.
-
-these projects taught me that graph methods can generalize well, but they also come with serious hardware and implementation costs.
-
-### computer vision
-
-older experiments with medical imaging, gradcam, transfer learning, and few-shot learning.
-
-examples:
-
-* brain tumor classification
-* car recognition
-* covid image analysis
-
-### competitions
-
-kaggle and datathon-style experiments.
-
-these folders are messy by nature. competitions are usually about iteration, feature engineering, model comparison, and squeezing small performance gains out of chaotic workflows.
-
-### data analysis
-
-older tabular and visualization work.
-
-the microsoft malware prediction analysis was especially important for me because it pushed me back toward data, tabular problems, and deeper system-level thinking.
-
-## tech stack
-
-current focus:
-
-* languages: go, python, sql
-* databases: postgresql, duckdb
-* backend: fastapi, rest apis, sqlalchemy, alembic, docker
-* data: pandas, numpy, data modeling, query optimization
-* tools: linux, git
-
-previous / learning projects:
-
-* pytorch
-* pytorch geometric
-* scikit-learn
-* catboost
-* xgboost
-* lightgbm
-* sbert
-* transformers
-* matplotlib
-* seaborn
-
-## what changed
-
-i used to describe this as a deep learning and machine learning portfolio.
-
-that is no longer accurate.
-
-ai/ml was an important learning phase for me, but my current direction is backend engineering and data systems. i am more interested in how data is modeled, stored, queried, indexed, protected by transactions, and exposed through clean services.
-
-in short:
-
-i care less about chasing model accuracy now, and more about building reliable systems around data.
-
-## links
-
-github: github.com/tunahanyrd
-website: funeralcs.com
-linkedin: linkedin.com/in/tunahanyrd
+- Website: [funeralcs.com](https://funeralcs.com)
+- LinkedIn: [linkedin.com/in/tunahan yrd](https://linkedin.com/in/tunahanyrd)
