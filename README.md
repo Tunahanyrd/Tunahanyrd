@@ -1,72 +1,54 @@
-# Tunahan Yardimci
+# tunahanyrd
 
-Computer Science student focused on backend engineering and data-intensive systems. I work mostly with PostgreSQL, Go, Python/FastAPI, and database-backed application design.
+Backend engineer, trying to become a data engineer.
 
-Current direction: OLTP systems, schema design, transaction safety, storage-engine concepts, and practical software that keeps data consistent under real workflows.
+I work mostly on backend systems, databases, storage, and the parts of software where consistency stops being optional.
 
-## What I Work On
+## Currently
 
-- Backend services with clear service boundaries
-- PostgreSQL schemas, constraints, indexes, triggers, and transactions
-- Data-intensive applications and local-first tools
-- Linux desktop utilities and small systems projects
-- Technical writing about databases, storage, LLM behavior, and engineering trade-offs
+- Software engineer intern at **İKAN-HR**, rewriting a backend around Django, PostgreSQL, and SeaweedFS. I also help with frontend work when needed.
+- Building the backend for [Violaid](https://violaid.com/) with a friend.
+- Studying Computer Science at Istanbul University.
+- President of Istanbul University's Data Club Community.
 
-## Selected Projects
+## Selected projects
 
 ### [koru](https://github.com/Tunahanyrd/koru)
 
-Desktop-first, local-first document board for personal records such as invoices, contracts, certificates, scans, and notes.
-
-Koru combines a native Gio desktop app, CLI tooling, SQLite FTS5 search, OCR extraction, content-addressed blob storage, soft delete, backup/restore, and local recovery checks. The design goal is simple: keep original bytes recoverable and searchable without accounts or cloud dependency.
+Local-first personal document store written in Go. Original bytes live in a content-addressed filesystem blob store; metadata and FTS5 search live in SQLite. Includes import/export, tagging, OCR jobs, integrity checks, and backup/restore flows.
 
 ### [IU-KIK-APP](https://github.com/Tunahanyrd/IU-KIK-APP)
 
-Institutional work tracking and coordination system for Istanbul University. Built for structured announcements, task assignment, scheduling, approvals, auditability, and push notifications instead of losing operational work in WhatsApp groups.
+Institutional work and event coordination system developed for Istanbul University's Corporate Communication Coordination Office. FastAPI, PostgreSQL, SQLAlchemy, Alembic, React Native/Expo, audit logs, notification outbox, and scheduler-backed reminders. It replaced a workflow that otherwise lived in chat.
 
-Backend: FastAPI, PostgreSQL 16, SQLAlchemy, Alembic, APScheduler, JWT auth, append-only audit ledger, notification outbox, Prometheus metrics.
+### [NeuroPass](https://github.com/Tunahanyrd/neuropass)
 
-Frontend: React Native, Expo, role-based navigation, push notifications, dashboard exports, and mobile workflows for staff, managers, and student assistants.
+First-place NeuroBridge Hackathon project. An ML-based drug-screening pipeline built from SMILES inputs with FastAPI prediction services for BBB permeability, logBB exposure, and toxicity risk.
 
 ### [obs-go](https://github.com/Tunahanyrd/obs-go)
 
-Student Information System MVP built with Go and PostgreSQL. This project is mainly about modeling core academic workflows correctly, even in a small monolith.
+A student information system I built to learn Go and databases: PostgreSQL constraints, transactions, advisory locks, triggers, audit logs, materialized views, and REST APIs. It is a learning project, not production guidance; assume there are mistakes.
 
-Highlights:
+## Background
 
-- Layered Go backend with REST handlers, services, repositories, and domain logic
-- PostgreSQL schemas for students, terms, courses, enrollments, schedules, audit logs, and statistics
-- Transaction-safe enrollment flow using constraints and `pg_advisory_xact_lock`
-- Database-level consistency through triggers, materialized views, and GiST exclusion constraints
+- Former part-time software engineer at Istanbul University.
+- Led seven technical events through the Data Club Community with speakers and partners including Red Hat, EPAM, PyData, and the Turkish AI Community.
 
-### [belgin-privacy-filter](https://github.com/Tunahanyrd/belgin-privacy-filter)
+## Writing
 
-Turkish-focused LoRA adapter for privacy-sensitive span detection on top of `openai/privacy-filter`.
+I occasionally write at [FuneralCS](https://funeralcs.com/). The most technical piece so far is [LSM Trees vs. B-Trees](https://funeralcs.com/posts/lstm-vs-btree/).
 
-It targets Turkish complaint and customer-support style text, detecting spans such as private person names, emails, phone numbers, account numbers, and secrets so downstream systems can mask sensitive data before analytics, indexing, logging, or dataset preparation.
+## Working set
 
-### [neuropass](https://github.com/Tunahanyrd/neuropass)
-
-1st place NeuroBridge Hackathon project for BBB permeability and ADMET screening.
-
-Built an ML-based drug screening pipeline from SMILES inputs with dataset cleaning, feature preparation, model training, FastAPI prediction endpoints, and interpretable output for BBB permeability, logBB exposure, and Tox21 toxicity risk.
-
-## Experience
-
-- Software Engineer, part-time at Istanbul University
-- Backend and PostgreSQL schema design for a department-wide academic mobile application
-- President, Data Club Community at Istanbul University
-- Co-founder and technical writer at [funeralcs.com](https://funeralcs.com)
-
-## Tech Stack
-
-- Languages: Go, Python, SQL, Shell
+- Languages: Go, Python, SQL
+- Backend: Django, FastAPI, SQLAlchemy, Goose, Alembic
 - Databases: PostgreSQL, SQLite, DuckDB
-- Backend: FastAPI, REST APIs, SQLAlchemy, Alembic, Docker
-- Data: pandas, NumPy, data modeling, query optimization
-- Tools: Linux, Git, desktop integration, small CLIs
+- Storage: SeaweedFS, R2
+- Interface: Gio
+- Tooling: Docker, Linux, Git
 
 ## Links
 
-- Website: [funeralcs.com](https://funeralcs.com)
-- LinkedIn: [linkedin.com/in/tunahanyrd](https://linkedin.com/in/tunahanyrd)
+- [tunahanyrd.dev](https://tunahanyrd.dev)
+- [LinkedIn](https://linkedin.com/in/tunahanyrd)
+- [FuneralCS](https://funeralcs.com/)
